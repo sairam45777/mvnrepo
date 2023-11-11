@@ -16,6 +16,7 @@ public class Act {
 		//Invokes the browser
 		WebDriver driver =  new ChromeDriver();
 
+		//Maximize 
 		driver.manage().window().maximize();
 		
 		driver.get("https://jqueryui.com/droppable/");
