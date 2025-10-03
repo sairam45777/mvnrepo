@@ -1,15 +1,18 @@
 package mvnjava;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Alerts {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\saina\\Documents\\Drivers\\chromedriver.exe");
-
+		// TODO Auto-generated method 
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\saina\\Documents\\Drivers\\chromedriver.exe");
+WebDriverManager.chromedriver().setup();
 		//Invokes the browser
 		WebDriver driver =  new ChromeDriver();
 
@@ -26,8 +29,9 @@ public class Alerts {
 		
 		//driver.switchTo().alert().dismiss();
 		
-		driver.switchTo().alert().accept();
-		
+	Alert al=	driver.switchTo().alert();
+		al.accept();
+		al.getText();
 		
 		
 

@@ -6,12 +6,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class FileUpload {
 
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\saina\\Documents\\Drivers\\chromedriver.exe");
-
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\saina\\Documents\\Drivers\\chromedriver.exe");
+WebDriverManager.chromedriver().setup();
 		//Invokes the browser
 		WebDriver driver =  new ChromeDriver();
 
@@ -22,9 +23,11 @@ public class FileUpload {
 		
 		//AutoIT
 		Runtime.getRuntime().exec("C:\\Users\\saina\\Documents\\AutoIT\\FileUpload.exe");
+		//Runtime.getRuntime().exec("C:\\Users\\saina\\Documents\\AutoIT\\savitri111.exe");
+		//Runtime.getRuntime().exec("C:\\Users\\saina\\Desktop\\savitri.exe");
+
 		
-		
-		
+
 		
 		
 	}
