@@ -15,13 +15,11 @@ System.setProperty("webdriver.chrome.driver", "C:\\Users\\saina\\Documents\\Driv
 
 //Invokes the browser
 WebDriver driver =  new ChromeDriver();
-
 driver.manage().window().maximize();
 //Pass the URL
 driver.get("https://www.saucedemo.com");
 
 String Title=driver.getTitle();
-
 System.out.println(Title);
 //Login
 driver.findElement(By.id("user-name")).sendKeys("standard_user");
@@ -45,12 +43,9 @@ try {
 	driver.findElement(By.id("last_name")).sendKeys("123");
 } catch (Exception e) {
 	// TODO: handle exception
-	
 	System.out.println(e);
 	driver.findElement(By.id("last-name")).sendKeys("123");
 }
-
-
 driver.findElement(By.xpath("//input[@type='text']")).sendKeys("547");
 driver.findElement(By.id("continue")).click();
 driver.findElement(By.id("react-burger-menu-btn")).click();
